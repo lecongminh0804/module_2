@@ -1,4 +1,4 @@
-package _02_loop_in_java.exercise;
+package _02_loop_java.exercise;
 public class B3_DisplaysPrimeNumbersLessThan100 {
     public static void main(String[] args) {
         int number = 0;

@@ -1,10 +1,10 @@
-package _02_loop_in_java.exercise;
+package _02_loop_java.exercise;
 
 import java.util.Scanner;
 
 public class B1_ShowTypes {
     public static void main(String[] args) {
-        int choice;
+        int chon;
         Scanner input = new Scanner(System.in);
         do {
             System.out.println("Menu:");
@@ -14,9 +14,9 @@ public class B1_ShowTypes {
             System.out.println("4. Tam cân");
             System.out.println("5. Thoát");
             System.out.println("Nhập 1 số bạn muốn vẽ: ");
-            choice = input.nextInt();
+            chon = input.nextInt();
 
-            switch (choice) {
+            switch (chon) {
                 case 1:
                     int height = 3;
                     int width = 6;
@@ -44,7 +44,7 @@ public class B1_ShowTypes {
                     }
                     break;
                 case 4:
-                    int n = 5; // Số hàng của tam giác cân
+                    int n = 5;
                     for (int i = 1; i <= n; i++) {
                         for (int j = 1; j <= n - i; j++) {
                             System.out.print(" ");
@@ -62,7 +62,7 @@ public class B1_ShowTypes {
                 default:
                     System.out.println("Không có lựa chọn, xin chọn lại");
             }
-        } while (choice != 5);
+        } while (chon != 5);
     }
 }
 
