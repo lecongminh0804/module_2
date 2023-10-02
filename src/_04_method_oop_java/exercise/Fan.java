@@ -62,7 +62,7 @@ public class Fan {
         Fan fan2 = new Fan();
         fan2.setOn(false);
         fan2.setSpeed(Fan.MEDIUM);
-        fan2.setColor("blue");
+        fan2.setColor("Blue");
 
         System.out.println("Thông tin Fan 1:" + fan1.toString());
         System.out.println("Thông tin Fan 1:" + fan2.toString());
