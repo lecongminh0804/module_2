@@ -1,4 +1,4 @@
-package _05_Access_modifier_static.practice.exercise.EX_2;
+package _05_Access_modifier_static.exercise.EX_2;
 
 public class Test_Student {
     public static void main(String[] args) {

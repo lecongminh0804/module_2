@@ -1,4 +1,4 @@
-package _05_Access_modifier_static.practice.exercise.EX_2;
+package _05_Access_modifier_static.exercise.EX_2;
 
 public class Student {
     private String name = "john";

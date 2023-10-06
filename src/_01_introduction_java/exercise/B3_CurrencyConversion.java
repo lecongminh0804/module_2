@@ -9,6 +9,6 @@ public class B3_CurrencyConversion {
         System.out.println("Mời bạn nhập số tiền USD:");
         usd = sc.nextDouble();
         double quydoi = usd * 23000;
-        System.out.print("Số tiền USD chuyển sang VND là: "+ quydoi);
+        System.out.print("Số tiền USD chuyển sang VND là: " + quydoi);
     }
 }

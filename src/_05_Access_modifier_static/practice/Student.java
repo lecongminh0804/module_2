@@ -1,4 +1,4 @@
-package _05_Access_modifier_static.practice.practice;
+package _05_Access_modifier_static.practice;
 
 public class Student {
     private int rollno;
