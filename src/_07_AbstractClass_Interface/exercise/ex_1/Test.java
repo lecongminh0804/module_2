@@ -13,8 +13,10 @@ public class Test {
 
         for(Shape e : arr){
             if(!(e instanceof Square)){
+                System.out.println(e.getClass().getSimpleName());
                 e.resize((new Random()).nextInt(100));
                 System.out.println(e);
+                System.out.println("-------------------------------------");
             }
         }
     }
