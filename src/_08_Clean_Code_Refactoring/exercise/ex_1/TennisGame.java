@@ -1,63 +1,61 @@
 package _08_Clean_Code_Refactoring.exercise.ex_1;
 
 public class TennisGame {
+    private static final String ZERO_SCORE = "Love";
+    private static final String ONE_SCORE = "Fifteen";
+    private static final String TWO_SCORE = "Thirty";
+    private static final String THREE_SCORE = "Forty";
+    private static final String ALL = "All";
+    private static final String WIN = "Win";
+    private static final String DEUCE = "Deuce";
+    private static final String ADVANTAGE = "Advantage";
 
-    public static String getScore(String player1Name, String player2Name, int m_score1, int m_score2) {
-        String score = "";
-        int tempScore=0;
-        if (m_score1==m_score2)
+    public static String getScore(String playerOneName, String playerTwoName, int playerOneScore, int playerTwoScore) {
+        if (playerOneScore == playerTwoScore)
         {
-            switch (m_score1)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                case 3:
-                    score = "Forty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
-
-            }
+            return displayDeuce(playerOneScore);
         }
-        else if (m_score1>=4 || m_score2>=4)
+        if (playerOneScore >= 4 || playerTwoScore >= 4)
         {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
+            return displayAdvantageOrWin(playerOneName, playerTwoName, playerOneScore, playerTwoScore);
         }
-        else
+        return displayScore(playerOneScore, playerTwoScore);
+    }
+    private static String displayDeuce(int score){
+        return translateScore(score) + "-" + ALL;
+    }
+    private static String displayAdvantageOrWin(String playerOneName, String playerTwoName, int playerOneScore, int playerTwoScore){
+        int minusResult = playerOneScore - playerTwoScore;
+        if(minusResult == 1){
+            return ADVANTAGE + " " + playerOneName;
+        }
+        else if(minusResult == -1){
+            return ADVANTAGE + " " + playerTwoName;
+        }
+        else if(minusResult >= 2){
+            return WIN + " " + playerTwoName;
+        }
+        else {
+            return WIN + " " + playerTwoName;
+        }
+    }
+    private static String displayScore(int playerOneScore, int playerTwoScore){
+        return translateScore(playerOneScore)+ "-" + translateScore(playerTwoScore);
+    }
+    private static String translateScore(int score){
+        switch (score)
         {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
+            case 0:
+                return ZERO_SCORE;
+            case 1:
+                return ONE_SCORE;
+            case 2:
+                return TWO_SCORE;
+            case 3:
+                return THREE_SCORE;
+            default:
+                return DEUCE;
         }
-        return score;
     }
 }
+
