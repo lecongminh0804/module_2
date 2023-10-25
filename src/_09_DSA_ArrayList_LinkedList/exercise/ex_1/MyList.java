@@ -1,4 +1,4 @@
-package _09_DSA_ArrayList_LinkedList.exercise;
+package _09_DSA_ArrayList_LinkedList.exercise.ex_1;
 
 import java.util.Arrays;
 
