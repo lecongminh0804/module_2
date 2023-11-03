@@ -1,4 +1,4 @@
-package _13_Search_Algorithm.exercise.Oex_1;
+package _13_Search_Algorithm.exercise.O_ex_1;
 
 public class Analytical_Search_Using_Recursive_Rules {
     private static int  binarySearch(int[] array, int left, int right, int value){
