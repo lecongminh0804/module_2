@@ -1,6 +1,5 @@
-package _12_.exrcise;
+package _12_Java_Collection_Framework.exrcise;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Test {
@@ -75,8 +74,6 @@ public class Test {
                 case 8:
                     System.out.println("Đã thoát chương trình");
                     System.exit(0);
-
-
             }
         }while (true);
     }

@@ -1,4 +1,4 @@
-package _12_.exrcise;
+package _12_Java_Collection_Framework.exrcise;
 
 public class Product {
     int id;
