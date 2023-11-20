@@ -1,4 +1,4 @@
-package _17_IO_Binary_File_Serialization.practice;
+package _17_IO_Binary_File_Serialization.exercise.ex_1;
 
 import java.io.*;
 import java.util.ArrayList;
